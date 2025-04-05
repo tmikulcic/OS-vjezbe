@@ -1,0 +1,35 @@
+Zadatak 1
+
+mkdir -p vjezba_2/data
+mkdir -p vjezba_2/backup
+touch vjezba_2/data/script.js
+touch vjezba_2/data/style.css
+touch vjezba_2/data/.env
+echo 'console.log("Hello, World!");' > vjezba_2/data/script.js
+echo 'body { background-color: #f0f0f0; }' > vjezba_2/data/style.css
+echo 'VJEZBE=OS' > vjezba_2/data/.env
+
+------------------------------------------------------------------------------------
+
+Zadatak 2
+
+cp -vr vjezba_2/data/. vjezba_2/backup/
+cd vjezba_2/data
+ls -lahS ../backup
+
+------------------------------------------------------------------------------------
+
+Zadatak 3
+
+shopt -s extglob
+rm -v data/!(.env)
+cp -vn backup/* data/
+ls -ltA data
+
+------------------------------------------------------------------------------------
+
+Zadatak 4
+
+ls -lASa /
+ls -lShh /
+ls -ltR --color=auto -A
